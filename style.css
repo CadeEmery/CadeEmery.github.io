@@ -64,4 +64,20 @@ header a:hover{
         color:#cccccc;
         font-weight:bold;
     }
-    
+/* Showcase */
+
+#showcase{
+        min-height:600px;
+        background:url('SHCSE.jpg') no-repeat -200px -300px;
+        text-align:center;
+        color:#ffffff;
+}
+#showcase h1{
+        margin-top:100px;
+        font-size:55px;
+        margin-bottom:10px;
+}
+#showcase p{
+        font-size:20px;
+        
+}
