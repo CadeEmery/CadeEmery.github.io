@@ -170,4 +170,55 @@ footer{
         text-align:center;
 }
 
+/* luxaryshowcase */
 
+#luxaryshowcase{
+        min-height:600px;
+        background:url('LXXSS.jpg') no-repeat 100px -200px;
+        text-align:center;
+        color:#ffffff;
+        background-color:#000000;
+}
+#luxaryshowcase h1{
+        margin-top:100px;
+        font-size:55px;
+        margin-bottom:10px;
+}
+#luxaryshowcase p{
+        font-size:20px;
+        
+}
+
+/* Luxary Page Boxes */
+
+#boxesB{
+        margin-top:20px;
+}
+
+#boxesB .box{
+        float:left;
+        text-align:center;
+        width:30%;
+        padding:10px;
+
+}
+
+#boxesB .box img{
+        width:300px;
+        
+}
+
+#boxesB{
+        min-height:600px;
+        background:url('F.jpg') no-repeat -800px -500px;
+        
+}
+
+/*Shadow Text */
+.element {
+	text-shadow:
+		-1px -1px 0 #000,
+		1px -1px 0 #000,
+		-1px 1px 0 #000,
+		1px 1px 0 #000;
+}
