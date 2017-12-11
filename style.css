@@ -174,7 +174,7 @@ footer{
 
 #luxaryshowcase{
         min-height:600px;
-        background:url('LXXSS.jpg') no-repeat 100px -200px;
+        background:url('LXXSS.jpg') no-repeat center;
         text-align:center;
         color:#ffffff;
         background-color:#000000;
@@ -221,4 +221,99 @@ footer{
 		1px -1px 0 #000,
 		-1px 1px 0 #000,
 		1px 1px 0 #000;
+}
+
+/* style showcase */
+
+#styleshowcase{
+        min-height:600px;
+        background:url('STSH.jpg') no-repeat  center;
+        text-align:center;
+        
+        color:#ffffff;
+        background-color:#35424a;
+}
+#styleshowcase h1{
+        margin-top:100px;
+        font-size:55px;
+        margin-bottom:10px;
+}
+#styleshowcase p{
+        font-size:20px;
+        
+}
+
+/* Style Page Boxes */
+
+#boxesC{
+        margin-top:20px;
+        background-color:#35424a;
+}
+
+#boxesC .box{
+        float:left;
+        text-align:center;
+        width:30%;
+        padding:10px;
+        
+
+}
+
+#boxesC .box img{
+        width:300px;
+         
+}
+
+#boxesC{
+        min-height:600px;
+        background:url('G.jpg') no-repeat center;
+        background-color:#e8491d;
+}
+
+
+/* speed showcase */
+
+#speedshowcase{
+        min-height:600px;
+        background:url('SPSHHV.jpg') no-repeat  center;
+        text-align:center;
+        
+        color:#ffffff;
+        background-color:#35424a;
+}
+#speedshowcase h1{
+        margin-top:100px;
+        font-size:55px;
+        margin-bottom:10px;
+}
+#speedshowcase p{
+        font-size:20px;
+        
+}
+
+/* Speed Page Boxes */
+
+#boxesD{
+        margin-top:20px;
+        background-color:#35424a;
+}
+
+#boxesD .box{
+        float:left;
+        text-align:center;
+        width:30%;
+        padding:10px;
+        
+
+}
+
+#boxesD .box img{
+        width:300px;
+         
+}
+
+#boxesD{
+        min-height:600px;
+        background:url('SSS.jpg') no-repeat center;
+        background-color:#e8491d;
 }
