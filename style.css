@@ -6,7 +6,7 @@ body{
 }
 /* Global> */
 .container{
-        width:80%;
+        width:90%;
         margin:auto;
         overflow:hidden;
         
@@ -131,12 +131,13 @@ header a:hover{
 #boxes .box{
         float:left;
         text-align:center;
-        width:30%;
-        padding:10px;
+        width:29%;
+        padding:1%;
 }
 
 #boxes .box img{
-        width:300px;
+        width:100%;
+        height:250px;
 }
 
 /* Sidebar */
@@ -204,7 +205,8 @@ footer{
 }
 
 #boxesB .box img{
-        width:300px;
+        width:100%;
+        heigth:300px;
         
 }
 
