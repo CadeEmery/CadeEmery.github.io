@@ -1,0 +1,168 @@
+<html>
+    <head>
+        <meta http-equiv= "Content-Type" content = "text/html; charset = UTF-8"/>
+        <title>Processing Game></title>
+        <script type="text/javascript" src = "./js/processing.js"></script>
+    </head>
+    <body>
+        <script type="text/processing">
+            PImage back;
+PImage ast;
+PImage sat;
+PImage aod;
+PImage ufo;
+
+
+int count = 0;
+int Vy = 0;
+int y = 0;
+int gamestate = 2;
+int aodvx = 5;
+int x = 1000;
+int ufox = 1000;
+float r = random(0, 800);
+float ufor = random(0, 800);
+int ufovx = 15;
+int score;
+
+void setup(){
+  size(1000,800);
+  back = loadImage("./img/back.png");
+  ast = loadImage("./img/ast.png");
+  sat = loadImage("./img/saturn.png");
+  aod = loadImage("./img/asteroid.png");
+  ufo = loadImage("./img/ufo.png");
+  image(back, 0, 0);
+}
+
+void draw(){
+  if (gamestate == 0){
+    image(back, count, 0);
+    image(back, width + count, 0);
+    count--;
+    if (count == -1000){
+      count = 0;
+   }
+   
+   fill(255,255,255);
+   textSize(25);
+   text("Score: " + score, 10, 40);
+   
+   if (x%10 == 0){
+       score++;
+   }
+    
+    image(aod, x, r);
+    x = x - aodvx;
+    if (x<-1000){
+      x = 1000;
+      r = r - 100;
+      if (r < 850){
+        r = random(0, 800);
+      }
+    }
+    
+    image(ufo, ufox, ufor);
+    ufox = ufox - ufovx;
+    if (ufox<-1000){
+      ufox = 1000;
+      ufor = ufor - 50;
+      if (ufor < 850){
+        ufor = random(0, 800);
+      }
+    }
+    
+    
+    if (x > aodvx && x < aodvx + 50 && y < r + 200 && y > r){
+      gamestate = 1;
+    }
+    
+    if (ufox > ufovx && x < ufovx + 50 && y < ufor + 200 && y > ufor){
+      gamestate = 1;
+    }
+       
+       
+    image(ast, 100, y);
+    Vy += 1;
+    
+    y = y + Vy;
+    
+  if (y<-40 || y > 820){
+    gamestate = 1;
+  }
+  }
+
+
+  if (gamestate == 1){
+    score = 0
+    x = 1000
+    ufox = 1000
+    background(255, 0, 0);
+    image(sat, 200, 200);
+    textSize(50);
+    fill(255,255,0);
+    rect(190,258,200,50,5);
+    rect(190, 410, 280, 60, 5);
+    fill(0);
+    text("Restart?", 200, 300);
+    text("Main Menu", 200, 450);
+    
+    if (mouseX>190 && mouseX < 390 && mouseY > 258 && mouseY < 318){
+      fill(55,55,0);
+      rect(190, 258, 200, 50, 5);
+      fill(255);
+      text("Restart?", 200, 300);
+    }
+      
+    
+     
+    
+    if (mouseX>190 && mouseX < 470 && mouseY > 410 && mouseY < 470){
+      fill(55,55,0);
+      rect(190, 410, 280, 60, 5);
+      fill(255);
+      text("Main Menu", 200, 450);
+    }
+      
+    if (mousePressed){y = 200;
+      gamestate = 0;
+
+    }
+    if (mouseX>190 && mouseX < 470 && mouseY > 410 && mouseY < 470){
+      if (mousePressed){
+        gamestate = 2;
+      }
+    }
+    
+    
+  }
+  if (gamestate == 2){
+    background(50,100,150);
+    image(sat, 200, 200);
+    textSize(50);
+    fill(255, 255, 0);
+    rect(190,245,460,80,5);
+    fill(0);
+    text("Welcome!", 200, 200);
+    text("Play Space Flappy?", 200, 300);
+    if (mouseX>190 && mouseX < 650 && mouseY > 245 && mouseY < 325){
+      fill(55,55,0);
+      rect(190, 245, 460, 80, 5);
+      fill(255);
+      text("Play Space Flappy?", 200, 300);
+      if (mousePressed){
+        gamestate = 0;
+      }
+    }
+      
+    
+    }
+  }
+
+void mousePressed(){
+Vy = -20;
+}
+        </script>
+        <canvas id = "sketch" style = "boarder: 1px solid black;"></canvas>
+    </body>
+</html>
